@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Identifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="app-header">
+            <h1>Waste Segregation Identifier</h1>
+            <p class="subtitle">Upload an image to identify if it's Recyclable, Organic, Hazardous, or General Waste.</p>
+            <div class="bins-legend" aria-label="Category legend">
+                <span class="legend-item recyclable">Recyclable</span>
+                <span class="legend-item organic">Organic</span>
+                <span class="legend-item hazardous">Hazardous</span>
+                <span class="legend-item general">General</span>
+            </div>
+        </header>
+
+        <div class="file-input-wrapper">
+            <label for="file-input" class="file-input-label">Choose an Image</label>
+            <input type="file" id="file-input" class="file-input" accept="image/*">
+        </div>
+
+        <img id="image-preview" src="#" alt="Image Preview" aria-hidden="true">
+        
+        <div id="result-container" aria-live="polite">
+            <div class="loader" id="loader" aria-hidden="true"></div>
+            <p id="loading-text">Analyzing image...</p>
+            <p id="result-text"></p>
+        </div>
+
+    
+    <section class="tips">
+        <h2 class="section-title">Segregation tips</h2>
+        <ul class="tips-list">
+            <li><span class="dot organic"></span>Food scraps and yard waste go to Organic.</li>
+            <li><span class="dot recyclable"></span>Clean paper, glass, and plastics go to Recyclable.</li>
+            <li><span class="dot hazardous"></span>Batteries, chemicals, e-waste are Hazardous.</li>
+            <li><span class="dot general"></span>Soiled or mixed items go to General.</li>
+        </ul>
+    </section>
+
+    <section class="categories-grid" aria-label="Waste categories overview">
+        <article class="category-card recyclable">
+            <div class="card-icon">♻️</div>
+            <h3>Recyclable</h3>
+            <p>Paper, cardboard, metals, clear plastics, and clean glass.</p>
+        </article>
+        <article class="category-card organic">
+            <div class="card-icon">🌿</div>
+            <h3>Organic</h3>
+            <p>Fruit peels, leftovers, yard trimmings, coffee grounds.</p>
+        </article>
+        <article class="category-card hazardous">
+            <div class="card-icon">⚠️</div>
+            <h3>Hazardous</h3>
+            <p>Batteries, paint, chemicals, bulbs. Handle with care.</p>
+        </article>
+        <article class="category-card general">
+            <div class="card-icon">🗑️</div>
+            <h3>General</h3>
+            <p>Non-recyclable, non-organic items and mixed materials.</p>
+        </article>
+    </section>
+
+    <div class="decor decor-1" aria-hidden="true"></div>
+    <div class="decor decor-2" aria-hidden="true"></div>
+ </div>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="feedback.js"></script>
+
+</body>
+</html>
