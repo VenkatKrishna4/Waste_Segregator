@@ -30,6 +30,8 @@ The core of this application is a custom-trained machine learning model.
 ## 📊 Live Demo
 
 https://wastesegregator.answerbox.in/
+
+## Webpage
 <img width="1918" height="869" alt="image" src="https://github.com/user-attachments/assets/fcfd8469-498a-4f36-8cd1-c448b77e4033" />
 
 
